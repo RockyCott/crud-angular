@@ -1,0 +1,12 @@
+<div class="container">
+  <app-add-form
+    (newItemEvent)="addPerson($event)"
+    [editdata]="editPersona"
+    (editItemEvent)="editPersonTable($event)"
+  ></app-add-form>
+  <app-person-table
+    #table
+    (deleteRowEvent)="deletePerson($event)"
+    (editRowEvent)="editPerson($event)"
+  ></app-person-table>
+</div>

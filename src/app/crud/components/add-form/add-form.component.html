@@ -1,0 +1,26 @@
+<div class="example-container">
+  <form [formGroup]="form">
+    <mat-form-field class="full">
+      <mat-label>Nombre</mat-label>
+      <input
+        matInput
+        #input
+        placeholder="Ex. Nougat"
+        formControlName="nombre"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <mat-label>Genero</mat-label>
+      <mat-select class="full" formControlName="genero">
+        <mat-option value="masculino">Masculino</mat-option>
+        <mat-option value="femenino">Femenino</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  <div class="add-button">
+    <button mat-raised-button color="primary" (click)="guardar()">
+      Guardar
+    </button>
+  </div>
+</div>
